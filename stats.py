@@ -32,10 +32,15 @@ def print_report(dict_of_characters):
 
   return sorted_list
 
+# def helper_func(dictionary_items):
+#     num_key_list = []
+#     for key, value in dictionary_items.items():
+#         num_key_list.append(value)
+#     return num_key_list[0]
 
-def helper_func(dictionary_items):
-   num_key_list = []
-   for key, value in dictionary_items.items():
-      num_key_list.append(value)
-   
-   return num_key_list[0]
+# for optimization using types
+
+def helper_func(dictionary_items: dict) -> int:
+    for key, value in dictionary_items.items():
+        return value
+    return 0
